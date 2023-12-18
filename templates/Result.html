@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result-style.css') }}">
+</head>
+<body>
+    <div id="all">
+        <h3>환자의 현재상태에 대한 Ontology 추론 결과</h3>
+        <div id="result">
+            {% for i in data %}
+                {{ loop.index }}.
+                {{ i }}<br>
+            {% endfor %}
+        </div>
+        <br>
+        <div id="link">
+            <a href="{{ url_for('signup_page') }}">처음으로 돌아가기</a>
+        </div>
+        <br>
+    </div>
+    <script src="../static/js/main.js"></script>
+</body>
+</html>

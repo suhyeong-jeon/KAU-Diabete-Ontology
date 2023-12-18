@@ -1,0 +1,142 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div id="all">
+    <h1 id="title">Diabetes Ontology</h1>
+
+    <form action="{{ url_for('signup_page') }}" method="post">
+        <div id="patient_condition">
+            <h3>환자의 몸 상태</h3>
+            <ul>
+                <li>심장</li>
+                    <ul>
+                        <li id="heart">
+                            <label><input type="checkbox" name="patient_heart_condition" value="0">정상 심장</label>
+                        </li>
+                        <li id="heart">
+                            <label><input type="checkbox" name="patient_heart_condition" value="1">심장 질환</label>
+                        </li>
+                    </ul>
+                <li>간</li>
+                    <ul>
+                        <li id="liver">
+                            <label><input type="checkbox" name="patient_liver_condition" value="0">정상 간</label>
+                        </li>
+                        <li id="liver">
+                            <label><input type="checkbox" name="patient_liver_condition" value="1">간 장애</label>
+                        </li>
+                    </ul>
+                <li>신장</li>
+                    <ul>
+                        <li id="kidney">
+                            <label><input type="checkbox" name="patient_kidney_condition" value="0">정상 신장</label>
+                        </li>
+                        <li id="kidney">
+                            <label><input type="checkbox" name="patient_kidney_condition" value="1">신장 질환</label>
+                        </li>
+                    </ul>
+                <li>위</li>
+                    <ul>
+                        <li id="stomach">
+                            <label><input type="checkbox" name="patient_stomach_condition" value="0">정상 위</label>
+                        </li>
+                        <li id="stomach">
+                            <label><input type="checkbox" name="patient_stomach_condition" value="1">위 질환</label>
+                        </li>
+                    </ul>
+                <li>췌장</li>
+                    <ul>
+                        <li id="pancreas">
+                            <label><input type="checkbox" name="patient_pancreas_condition" value="0">정상 췌장</label>
+                        </li>
+                        <li id="pancreas">
+                            <label><input type="checkbox" name="patient_pancreas_condition" value="1">췌장 장애</label>
+                        </li>
+                    </ul>
+            </ul>
+        </div>
+        <br>
+
+        <div class="patient_hypoglycemia">
+            <h3>환자의 저혈당 상태</h3>
+            <label><input type="checkbox" name="hasHypoglycemia" value="1">저혈당 취약함</label>
+            <label><input type="checkbox" name="hasHypoglycemia" value="0">저혈당에 취약하지 않음</label>
+        </div>
+        <br>
+
+        <div class="patient_cancer">
+            <h3>환자의 갑상선 상태</h3>
+            <label><input type="checkbox" name="hascancer" value="1">갑상선암이 있거나 걸렸었음</label>
+            <label><input type="checkbox" name="hascancer" value="0">갑상선암 없음</label>
+        </div>
+        <br>
+
+        <div class="patient_diverse_disease">
+            <h3>환자의 다발성 내분비 중증 상태</h3>
+            <label><input type="checkbox" name="hasdiversedisease" value="1">존재</label>
+            <label><input type="checkbox" name="hasdiversedisease" value="0">없음</label>
+        </div>
+        <br>
+
+        <div class="patient_familyhistory">
+            <h3>환자의 가족력 정보</h3>
+            <label><input type="checkbox" name="hasfamilyhistory" value="1">가족력 존재</label>
+            <label><input type="checkbox" name="hasfamilyhistory" value="0">가족력 없음</label>
+        </div>
+        <br>
+
+        <div class="patient_personal_information">
+            <h3>환자 정보</h3>
+            <ul>
+                환자의 무작위혈압 검사수치 :
+                <li id="patient_randombloodsugar_li">
+                    <input type="text" name="patient_randombloodsugar"><br><br>
+                </li>
+                환자 나이 :
+                <li id="patient_age_li">
+                    <input type="text" name="patient_age"><br><br>
+                </li>
+                환자 공복 혈당 :
+                <li id="patient_fastingBG_li">
+                    <input type="text" name="patient_fastingBG"><br><br>
+                </li>
+                환자 성별(남자면 1, 여자면 2):
+                <li id="patient_sex_li">
+                    <input type="text" name="patient_sex"><br><br>
+                </li>
+                환자 2시간 공복 혈당 :
+                <li id="patient_2hourBG_li">
+                    <input type="text" name="patient_2hourBG"><br><br>
+                </li>
+                환자 경구포도당 수치 :
+                <li id="patient_pododang_li">
+                    <input type="text" name="patient_pododang"><br><br>
+                </li>
+                환자 CPEP 수치 :
+                <li id="patient_cpep_li">
+                    <input type="text" name="patient_cpep"><br><br>
+                </li>
+                환자 이완기혈압 수치
+                <li id="patient_diastolic_li">
+                    <input type="text" name="patient_diastolic"><br><br>
+                </li>
+                환자 BMI 수치
+                <li id="patient_bmi_li">
+                    <input type="text" name="patient_bmi"><br><br>
+                </li>
+            </ul>
+        </div>
+        <div style="text-align:center">
+            <input type="submit" value="제출" method="POST">
+        </div>
+        <br>
+    </form>
+</div>
+</body>
+</html>
