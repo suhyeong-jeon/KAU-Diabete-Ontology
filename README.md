@@ -15,5 +15,5 @@
 <p align="center"><img src="https://github.com/suhyeong-jeon/KAU-Diabete-Ontology/assets/70623959/5dd20b9e-11c5-4be7-be5a-2b84d83961dd" width="300px" height="500px"></p>
 
 
-You can read a thesis we wrote by following link:</br>
+You are abld to read a thesis we wrote by following link:</br>
 [Click here if you want to read the thesis](https://drive.google.com/file/d/1nyE1Wv0MUo3qWrOcjzvsYW6-gTmPiunQ/view?usp=drive_link)
